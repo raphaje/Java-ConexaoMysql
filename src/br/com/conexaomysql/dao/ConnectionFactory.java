@@ -10,10 +10,9 @@ public class ConnectionFactory {
 		System.out.println("Conectando...");	
 	
 	try {
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 	} catch (ClassNotFoundException e) {
 		throw new SQLException(e);
-		//System.out.println("Falha para conectar...");
 	}
 
 	return DriverManager.getConnection("jdbc:mysql://127.0.0.1:8889/factorydao", "root", "root");
